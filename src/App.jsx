@@ -1,17 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { CardPage } from "./components/Rating";
+import { products } from "./data";
+ 
+ function App () {
+   return (
+          <div className="app">
+      {products.map((product) => (
+        <CardPage
+          name={product.name}
+          key={product.id}
+          image={product.image}
+          stars={product.rating.stars}
+          count={product.rating.count}
+          priceCents={product.priceCents}
+          keywords={product.keywords}
+        />
+      ))}
+     </div>
+   )
+ }
+ 	
 
-function App() {
-  const [count, setCount] = useState(0)
+	export default App;
 
-  return (
-      <div>
-
-      </div>
-
-  )
-}
-
-export default App
