@@ -1,0 +1,8 @@
+.button-add{
+    width: 230px;
+    height: 35px;
+    border: none;
+    border-radius: 25px;
+    background-color: gold;
+    /* margin-bottom: 20px; */
+}
